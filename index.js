@@ -6,10 +6,13 @@ const os = require("os");
 const fs = require("fs");
 const ejsMate = require("ejs-mate");
 const mongoose = require("mongoose");
+require('dotenv').config()
 
-const config = fs.readFileSync(process.env.PLOT_PAL, { encoding: "utf8" });
-global["config"] = JSON.parse(config ?? "{}");
-let dbUrl = global["config"].dbUrl;
+
+// const config = fs.readFileSync(process.env.PLOT_PAL, { encoding: "utf8" });
+// global["config"] = JSON.parse(config ?? "{}");
+let dbUrl = process.env.DB_URL;
+let port = process.env.PORT;
 
 mongoose
     .connect(dbUrl)
@@ -62,6 +65,6 @@ app.use("/Contact", contactRouter);
 const joinWaitListRouter = require("./routes/register");
 app.use("/Join", joinWaitListRouter);
 
-app.listen(global["config"].PORT, () => {
-    console.log(`server is running at ${global["config"].PORT}`);
+app.listen(port, () => {
+    console.log(`server is running at ${port}`);
 });
