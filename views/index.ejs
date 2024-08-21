@@ -1,0 +1,342 @@
+<% layout('layouts/boilerplate') %>
+<section class="hero relative w-full flex justify-center bg-[#128336] lg:min-h-[100vh]">
+    <main class="lg:w-[70%] w-[90%] flex lg:flex-row flex-col items-center justify-between py-32 z-[30]">
+        <div class="lg:w-[55%] w-full lg:text-left text-center lg:my-0 my-10">
+            <h1 class="font-bold lg:text-[80px] sm:text-6xl text-4xl lg:leading-[94px] leading-[40px] text-[#F7F8F9]">
+                Own Your Dream Land by paying
+                <div class="inline-flex flex-col items-center"><span class="text-[#65DC8B]">small small</span><img src="/images/dash.png" alt="" class="w-full" /></div>
+            </h1>
+            <p class="lg:text-lg leading-8 text-base text-[#F8F8F8] max-w-[60rem] my-4">
+                Begin your payment with just $3 a day to achieve your land ownership goals effortlessly. Flexible payment options are available, including weekly and monthly plans.
+            </p>
+            <a href="/Join" class="inline-block bg-[#65DC8B] text-[#000] font-semibold rounded-[4px] py-3.5 sm:px-20 px-8 mt-2">Become a land owner today</a>
+        </div>
+        <div class="lg:w-[45%] w-full lg:text-left sm:text-center text-left lg:my-0 my-10">
+            <img src="/images/phoneImage.png" alt="" />
+        </div>
+    </main>
+</section>
+<section class="w-full flex justify-center bg-[#F2FCF5] py-16 2xl:h-[150vh]">
+    <main class="lg:w-[70%] w-[90%] flex flex-col items-center text-center">
+        <h1 class="text-[#060606] font-bold leading-[61px] lg:text-5xl sm:text-4xl text-3xl">Why Choose Plotpal?</h1>
+        <div class="w-full my-16 flex flex-col xl:hidden  items-center space-y-6">
+            <div id="payment" class="accContainer active p-10 rounded-[8px] text-left cursor-pointer">
+                <h1 class="text-[#1C1C1C] font-semibold sm:text-2xl text-lg mb-3">Affordable Payment Plans</h1>
+                <div class="accText">
+                    <p class="text-[#333333] leading-8">
+                        Plotpal is designed to make land ownership accessible to everyone. With our flexible payment plans, you can start saving with as little as $3 a day. This low entry barrier
+                        ensures that anyone, regardless of their financial situation, can begin their journey towards owning a piece of land
+                    </p>
+                </div>
+            </div>
+            <div id="automated" class="accContainer active p-10 rounded-[8px] text-left cursor-pointer">
+                <h1 class="text-[#1C1C1C] font-semibold text-2xl mb-3">Automated Payments</h1>
+                <div class="accText">
+                    <p class="text-[#333333] leading-8">
+                        Our automated payment feature allows you to link your bank account and schedule regular transfers to your Plotpal savings account. This ensures that you never miss a
+                        deposit, making your savings journey seamless and stress-free.
+                    </p>
+                </div>
+            </div>
+            <div id="exclusive" class="accContainer active p-10 rounded-[8px] text-left cursor-pointer">
+                <h1 class="text-[#1C1C1C] font-semibold text-2xl mb-3">Exclusive Land Deals</h1>
+                <div class="accText">
+                    <p class="text-[#333333] leading-8">
+                        As a Plotpal user, you'll gain access to exclusive land deals and discounts through our partnerships with real estate developers and agents. These offers are tailored
+                        specifically for our users, providing unique opportunities to purchase land at reduced prices.
+                    </p>
+                </div>
+            </div>
+            <div id="expert" class="accContainer active p-10 rounded-[8px] text-left cursor-pointer">
+                <h1 class="text-[#1C1C1C] font-semibold text-2xl mb-3">Expert Financial Guidance</h1>
+                <div class="accText">
+                    <p class="text-[#333333] leading-8">
+                        Our team of financial and real estate experts is here to guide you every step of the way. Whether you need help setting up your savings plan, understanding the land market,
+                        or planning your purchase, our experts provide personalized advice and support.
+                    </p>
+                </div>
+            </div>
+            <div id="tracking" class="accContainer active p-10 rounded-[8px] text-left cursor-pointer">
+                <h1 class="text-[#1C1C1C] font-semibold text-2xl mb-3">Real-Time Tracking</h1>
+                <div class="accText">
+                    <p class="text-[#333333] leading-8">
+                        With our intuitive dashboard, you can easily track your savings progress in real-time. Visual aids like graphs and charts help you understand how close you are to reaching
+                        your land ownership goal, keeping you motivated and on track
+                    </p>
+                </div>
+            </div>
+            <div id="security" class="accContainer active p-10 rounded-[8px] text-left cursor-pointer">
+                <h1 class="text-[#1C1C1C] font-semibold text-2xl mb-3">Enhanced Security</h1>
+                <div class="accText">
+                    <p class="text-[#333333] leading-8">
+                        Plotpal employs state-of-the-art security protocols to safeguard your savings and personal information. Features like biometric authentication and fraud detection alerts
+                        ensure your account is secure
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-full my-16 xl:flex hidden justify-between">
+            <div class="flex items-center h-[120vh]">
+                <div id="imageContainer" class="relative 3xl:h-[600px] h-[400px] 3xl:w-[651px] w-[450px]">
+                    <div id="payment" class="carousel active absolute w-full h-full">
+                        <img src="/images/first.png" alt="" />
+                    </div>
+                    <div id="automated" class="carousel absolute w-full h-full">
+                        <img src="/images/second.png" alt="" />
+                    </div>
+                    <div id="exclusive" class="carousel absolute w-full h-full">
+                        <img src="/images/third.png" alt="" />
+                    </div>
+                    <div id="expert" class="carousel absolute w-full h-full">
+                        <img src="/images/four.png" alt="" />
+                    </div>
+                    <div id="tracking" class="carousel absolute w-full h-full">
+                        <img src="/images/five.png" alt="" />
+                    </div>
+                    <div id="security" class="carousel absolute w-full h-full">
+                        <img src="/images/six.png" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="textContainer" class="3xl:w-[35%] w-[45%] flex flex-col items-center space-y-6">
+                <div id="payment" class="accContainer active p-10 border-t border-[#64646433] rounded-[8px] text-left cursor-pointer">
+                    <h1 class="move text-[#1C1C1C] font-semibold text-2xl mb-3">Affordable Payment Plans</h1>
+                    <div class="accText">
+                        <p class="text-[#333333] leading-8">
+                            Plotpal is designed to make land ownership accessible to everyone. With our flexible payment plans, you can start saving with as little as $3 a day. This low entry barrier
+                            ensures that anyone, regardless of their financial situation, can begin their journey towards owning a piece of land
+                        </p>
+                    </div>
+                </div>
+                <div id="automated" class="accContainer p-10 border-t border-[#64646433] rounded-[8px] text-left cursor-pointer">
+                    <h1 class="move text-[#1C1C1C] font-semibold text-2xl mb-3">Automated Payments</h1>
+                    <div class="accText">
+                        <p class="text-[#333333] leading-8">
+                            Our automated payment feature allows you to link your bank account and schedule regular transfers to your Plotpal savings account. This ensures that you never miss a
+                            deposit, making your savings journey seamless and stress-free.
+                        </p>
+                    </div>
+                </div>
+                <div id="exclusive" class="accContainer p-10 border-t border-[#64646433] rounded-[8px] text-left cursor-pointer">
+                    <h1 class="move text-[#1C1C1C] font-semibold text-2xl mb-3">Exclusive Land Deals</h1>
+                    <div class="accText">
+                        <p class="text-[#333333] leading-8">
+                            As a Plotpal user, you'll gain access to exclusive land deals and discounts through our partnerships with real estate developers and agents. These offers are tailored
+                            specifically for our users, providing unique opportunities to purchase land at reduced prices.
+                        </p>
+                    </div>
+                </div>
+                <div id="expert" class="accContainer p-10 border-t border-[#64646433] rounded-[8px] text-left cursor-pointer">
+                    <h1 class="move text-[#1C1C1C] font-semibold text-2xl mb-3">Expert Financial Guidance</h1>
+                    <div class="accText">
+                        <p class="text-[#333333] leading-8">
+                            Our team of financial and real estate experts is here to guide you every step of the way. Whether you need help setting up your savings plan, understanding the land market,
+                            or planning your purchase, our experts provide personalized advice and support.
+                        </p>
+                    </div>
+                </div>
+                <div id="tracking" class="accContainer p-10 border-t border-[#64646433] rounded-[8px] text-left cursor-pointer">
+                    <h1 class="move text-[#1C1C1C] font-semibold text-2xl mb-3">Real-Time Tracking</h1>
+                    <div class="accText">
+                        <p class="text-[#333333] leading-8">
+                            With our intuitive dashboard, you can easily track your savings progress in real-time. Visual aids like graphs and charts help you understand how close you are to reaching
+                            your land ownership goal, keeping you motivated and on track
+                        </p>
+                    </div>
+                </div>
+                <div id="security" class="accContainer p-10 border-t border-[#64646433] rounded-[8px] text-left cursor-pointer">
+                    <h1 class="move text-[#1C1C1C] font-semibold text-2xl mb-3">Enhanced Security</h1>
+                    <div class="accText">
+                        <p class="text-[#333333] leading-8">
+                            Plotpal employs state-of-the-art security protocols to safeguard your savings and personal information. Features like biometric authentication and fraud detection alerts
+                            ensure your account is secure
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+<section class="relative">
+    <section class="stickyContainer w-full flex flex-col items-center bg-[#060606] lg:py-32 py-16">
+        <main class="lg:w-[90%] w-[90%] flex flex-col items-center text-center">
+            <h1 class="text-[#65DC8B] font-bold sm:leading-[61px] leading-[43px] sm:text-5xl text-4xl mb-2">How it works</h1>
+            <p class="text-[#8AC09B] leading-7 max-w-[60rem] mb-10">
+                We designed to make land ownership affordable and achievable for everyone. Our platform simplifies the savings process and provides tools and support to help you reach your goal of
+                owning land.
+            </p>
+            <div class="no-scrollbar w-full my-16 lg:flex hidden items-center gap-14 overflow-x-scroll">
+                <div class="cardCont relative xl:min-w-[867px] min-w-[550px]  h-[488px] bg-[#171E17] rounded-[8px] text-left overflow-hidden">
+                    <img src="/images/ill2.png" alt="" class="absolute firstImg" />
+                    <img src="/images/illustration1.png" alt="" class="secondImg rotate absolute right-[0]" />
+                    <img src="/images/signupPhone.png" alt="" class="thirdImg absolute right-[0] bottom-[0] w-[35rem]" />
+                    <div class="px-14 h-full w-full flex flex-col justify-between overflow-hidden">
+                        <h1 class="w-full text-end text-2xl font-medium text-[#fefefe] pt-10">01</h1>
+                        <div class="text-left">
+                            <span class="text-[#fefefe] text-3xl font-bold">Sign Up</span>
+                            <div class="w-full lg:h-[5rem] mt-2">
+                                <div class="cardText">
+                                    <p class="text-[#D5D5D5] font-medium leading-8 max-w-[35rem]">
+                                        Get started on Plotpal in no time! Simply sign up with your name, email, and password. It's that easy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardCont relative xl:min-w-[867px] min-w-[550px] h-[488px] bg-[#293A29] rounded-[8px] text-left overflow-hidden">
+                    <img src="/images/ill3.png" alt="" class="absolute" />
+                    <img src="/images/ill4.png" alt="" class="secImg absolute bottom-[0] right-[0]" />
+                    <img src="/images/secPhone.png" alt="" class="thirdImg absolute right-[0] bottom-[0] w-[35rem]" />
+                    <div class="px-14 w-full h-full flex flex-col justify-between overflow-hidden">
+                        <h1 class="w-full text-end text-2xl font-medium text-[#fefefe] pt-10">02</h1>
+                        <div class="text-left z-[10]">
+                            <span class="text-[#fefefe] text-3xl font-bold">Select the Land</span>
+                            <div class="w-full h-[5rem] mt-2">
+                                <div class="cardText">
+                                    <p class="text-[#D5D5D5] font-medium leading-8 max-w-[35rem]">Define your land purchase target and choose a savings plan that fits your budget.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardCont relative xl:min-w-[867px] min-w-[550px] h-[488px] bg-[#426242] rounded-[8px] text-left overflow-hidden">
+                    <img src="/images/ill5.png" alt="" class="absolute" />
+                    <img src="/images/ill6.png" alt="" class="thirdImgg rotate absolute right-[0]" />
+                    <img src="/images/thirdPhone.png" alt="" class="thirdImg absolute right-[0] bottom-[0] w-[35rem]" />
+                    <div class="px-14 w-full h-full flex flex-col justify-between overflow-hidden">
+                        <h1 class="w-full text-end text-2xl font-medium text-[#fefefe] pt-10">03</h1>
+                        <div class="text-left z-[10]">
+                            <span class="text-[#fefefe] text-3xl font-bold">Track Progress</span>
+                            <div class="w-full h-[5rem] mt-2">
+                                <div class="cardText">
+                                    <p class="text-[#D5D5D5] font-medium leading-8 max-w-[35rem]">Use our intuitive design to monitor your savings and stay on track.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="no-scrollbar w-full my-16 flex lg:hidden items-center gap-10 overflow-x-scroll">
+                <div class="cardCont relative sm:min-w-[400px] min-w-[300px]  h-[488px] bg-[#171E17] rounded-[8px] text-left overflow-hidden">
+                    <img src="/images/ill2.png" alt="" class="absolute" />
+                    <div class="p-4 h-full w-full flex flex-col justify-between overflow-hidden">
+                        <h1 class="w-full text-end text-2xl font-medium text-[#fefefe] pt-10">01</h1>
+                        <div class="text-left">
+                            <span class="text-[#fefefe] sm:text-3xl text-xl font-bold">Sign Up</span>
+                            <p class="text-[#D5D5D5] font-medium leading-8 text-xs">
+                                Get started on Plotpal in no time! Simply sign up with your name, email, and password. It's that easy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardCont relative sm:min-w-[400px] min-w-[300px] h-[488px] bg-[#293A29] rounded-[8px] text-left overflow-hidden">
+                    <img src="/images/ill3.png" alt="" class="absolute" />
+                    <div class="p-4 w-full h-full flex flex-col justify-between overflow-hidden">
+                        <h1 class="w-full text-end text-2xl font-medium text-[#fefefe] pt-10">02</h1>
+                        <div class="text-left">
+                            <span class="text-[#fefefe] sm:text-3xl text-xl font-bold">Select the Land</span>
+                            <p class="text-[#D5D5D5] font-medium leading-8 text-xs">Define your land purchase target and choose a savings plan that fits your budget.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardCont relative sm:min-w-[400px] min-w-[300px] h-[488px] bg-[#426242] rounded-[8px] text-left overflow-hidden">
+                    <img src="/images/ill5.png" alt="" class="absolute" />
+                    <div class="p-4 w-full h-full flex flex-col justify-between overflow-hidden">
+                        <h1 class="w-full text-end text-2xl font-medium text-[#fefefe] pt-10">03</h1>
+                        <div class="text-left">
+                            <span class="text-[#fefefe] sm:text-3xl text-xll font-bold">Track Progress</span>
+                            <p class="text-[#D5D5D5] font-medium leading-8 text-xs">Use our intuitive design to monitor your savings and stay on track.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="relative lg:w-[70%] w-[90%] flex justify-end">
+            <button class="text-[#1B2B0A] px-6 py-3 bg-[#65DC8B] rounded-[4px] font-semibold">Download app</button>
+            <img src="/images/arr.png" alt="" class="absolute bottom-[-3rem] right-[14rem] w-[10rem] h-[5rem]" />
+        </div>
+    </section>
+    <section class="stickyContainer download w-full flex justify-center items-center bg-[#060606] lg:h-[100vh] py-32">
+        <main class="lg:w-[70%] w-[90%] lg:text-left text-center">
+            <h1 class="text-[#060606] font-medium lg:leading-[73px] sm:leading-[40px] leading-[30px] lg:text-6xl sm:text-4xl text-2xl max-w-[50rem]">Download <span class="font-extrabold">Plotpal</span> today and take the first step towards land ownership.</h1>
+
+            <div class="mt-14 flex lg:flex-row flex-col items-center gap-6">
+                <button class="flex items-center gap-2 bg-[#060606] rounded-[4px] px-8 py-2">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.6036 7.48736C15.6425 6.28146 15.9747 4.50501 17.1307 3.33797C18.2037 2.25466 19.51 1.72668 20.3237 1.48531C20.6378 1.39212 20.9391 1.62898 20.9237 1.95625C20.8691 3.11065 20.5656 4.8325 19.7824 5.75493C19.0441 6.62448 17.8565 7.77756 16.1169 7.97157C15.8322 8.00333 15.5944 7.77371 15.6036 7.48736Z"
+                            fill="white"
+                        />
+                        <path
+                            d="M18.5824 29.5592C19.4177 29.8792 20.2623 30.2027 21.0267 30.2027C22.6619 30.2027 27.4233 26.43 27.5949 22.5116C27.6037 22.3104 27.4834 22.1307 27.3077 22.0323C26.0965 21.3545 24.1187 19.667 24.0499 17.2119C23.9696 14.3507 25.4062 12.0782 26.4934 11.1382C26.7381 10.9266 26.8221 10.5536 26.6037 10.315C25.6145 9.23474 23.6245 7.7488 21.8087 7.78528C20.4877 7.81182 19.2975 8.30388 18.2762 8.72613C17.4927 9.05008 16.8085 9.33293 16.241 9.33293C15.7034 9.33293 15.058 9.05189 14.3173 8.72934C13.3199 8.29496 12.1495 7.78528 10.8366 7.78528C8.40467 7.78528 3.59962 9.80191 3.59961 17.5871C3.5996 21.7141 7.86009 30.3122 11.4552 30.2027C12.2315 30.2027 13.0612 29.8813 13.8844 29.5623C14.6951 29.2482 15.4997 28.9365 16.241 28.9365C16.9567 28.9365 17.7651 29.2462 18.5824 29.5592Z"
+                            fill="white"
+                        />
+                    </svg>
+                    <span class="font-semibold text-[#fff]">Download on app store</span>
+                </button>
+                <button class="flex items-center gap-2 bg-[#060606] rounded-[4px] px-8 py-2">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.2986 26.6305C9.18978 26.7392 9.32002 26.9158 9.45528 26.8426C12.9062 24.976 17.5654 22.454 21.503 20.3155C21.5816 20.2727 21.5961 20.1664 21.5323 20.1036L18.7577 17.3718C18.7055 17.3204 18.6217 17.3207 18.5699 17.3724L9.2986 26.6305Z"
+                            fill="white"
+                        />
+                        <path
+                            d="M18.5614 14.3667C18.6135 14.4184 18.6976 14.4182 18.7495 14.3664L21.5251 11.5932C21.5883 11.5301 21.5728 11.424 21.4942 11.3816L20.1342 10.6474C18.499 9.76482 16.3078 8.58227 14.084 7.38252C12.4186 6.48403 10.7366 5.57683 9.25636 4.77891C9.12082 4.70585 8.98996 4.8826 9.09933 4.99098L18.5614 14.3667Z"
+                            fill="white"
+                        />
+                        <path
+                            d="M4 4.26032C4 3.95057 4.04686 3.69125 4.12838 3.47763C4.21262 3.25689 4.49069 3.23997 4.65853 3.40628L17.1447 15.7786C17.1972 15.8306 17.1974 15.9155 17.145 15.9677L4.61341 28.4621C4.4288 28.6461 4.12365 28.6016 4.06461 28.3477C4.02175 28.1634 4 27.9589 4 27.7394V4.26032Z"
+                            fill="white"
+                        />
+                        <path
+                            d="M23.5842 19.1835C23.5327 19.2116 23.4688 19.2026 23.427 19.1614L20.1765 15.9618C20.1236 15.9097 20.1234 15.8245 20.176 15.7722L23.4441 12.5232C23.486 12.4816 23.5506 12.4727 23.6024 12.5009C26.3841 14.0181 28.554 15.196 29.2156 15.546C29.2403 15.5591 29.2595 15.5789 29.2707 15.6046C29.3311 15.7437 29.345 15.8822 29.3244 16.0154C29.3185 16.0539 29.2935 16.0855 29.2591 16.1037C28.8785 16.3042 27.6044 16.9972 25.8298 17.9625L25.8189 17.9684C25.1397 18.3378 24.3875 18.747 23.5842 19.1835Z"
+                            fill="white"
+                        />
+                    </svg>
+
+                    <span class="font-semibold text-[#fff]">Download on playstore</span>
+                </button>
+            </div>
+        </main>
+    </section>
+    <section class="stickyContainer w-full flex justify-center bg-[#fefefe] py-32">
+        <main class="joinWaitlist lg:w-[70%] w-[90%] lg:px-24 px-6 flex lg:flex-row flex-col items-center justify-between rounded-[24px]">
+            <div class="lg:w-[50%] w-full  lg:text-left text-center py-16">
+                <h1 class="text-[#fefefe] font-medium lg:text-6xl sm:text-4xl text-2xl lg:leading-[74px] sm:leading-[40px] leading-[30px] mb-4">Ready to Own Your Dream <span class="font-bold">Land</span>?</h1>
+                <p class="text-[#D5D5D5] font-medium leading-5">Join thousands of satisfied users on the path to land ownership.</p>
+                <button class="text-[#1B2B0A] px-10 py-2 bg-[#65DC8B] rounded-[4px] font-semibold mt-8">Sign Up Now</button>
+            </div>
+            <div class="lg:w-[50%] w-full">
+                <img src="/images/standingImg.png" alt="" class="object-cover" />
+            </div>
+        </main>
+    </section>
+</section>
+<script>
+    const images = document.querySelectorAll("#textContainer div");
+    const paragraphs = document.querySelectorAll("#imageContainer div");
+
+    images.forEach((image) => {
+        image.addEventListener("click", function () {
+            const clickedId = image.id.toLowerCase();
+
+            images.forEach((img) => {
+                if (img === image) {
+                    img.classList.add("active");
+                } else {
+                    img.classList.remove("active");
+                }
+            });
+
+            paragraphs.forEach((paragraph) => {
+                if (paragraph.id === clickedId) {
+                    paragraph.classList.add("active");
+                } else {
+                    paragraph.classList.remove("active");
+                }
+            });
+        });
+    });
+</script>

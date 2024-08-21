@@ -1,0 +1,69 @@
+<% layout('layouts/boilerplate') %>
+<section class="w-full flex flex-col items-center bg-[#0C0C0E] min-h-[100vh]">
+    <main class="lg:w-[70%] w-[90%] flex flex-col items-center gap-14 text-center py-32 sm:mb-10 mb-2">
+        <h1 class="font-semibold text-[#65DC8B] px-10 py-2 border border-[#2D302E] rounded-[8px]">About</h1>
+        <div class="w-full rounded-3xl overflow-hidden sm:block hidden">
+            <img src="/images/aboutImage.png" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-full sm:hidden h-[604px] rounded-[40px] overflow-hidden">
+            <img src="/images/faqSmall.png" alt="" class="w-full h-full object-cover">
+        </div>
+    </main>
+    <div class="lg:w-[70%] w-[90%] grid lg:grid-cols-2 grid-cols-1 gap-14 mb-32">
+        <div class="sm:p-14 p-8 bg-[#121513] rounded-3xl">
+            <h1 class="text-[#8AC09B] text-2xl mb-4">Our Mission</h1>
+            <p class="text-[#65DC8B] font-bold sm:text-2xl text-lg sm:leading-[56px] leading-[50px]">
+                At Plotpal, we believe that everyone should have the opportunity to own land. Our mission is to simplify the savings process and make land ownership accessible to all.
+            </p>
+        </div>
+        <div class="sm:p-14 p-8 bg-[#121513] rounded-3xl">
+            <h1 class="text-[#8AC09B] text-2xl mb-4">Our Values</h1>
+            <p class="text-[#65DC8B] font-bold sm:text-2xl text-lg sm:leading-[56px] leading-[50px]">Transparency, Security, and Customer Satisfaction are at the core of everything we do</p>
+        </div>
+    </div>
+    <div class="lg:w-[70%] w-[90%] text-center flex flex-col items-center mt-16">
+        <h1 class="sm:text-5xl text-4xl font-bold text-[#65DC8B] leading-[61px] sm:mb-4 mb-2">Our Leadership</h1>
+        <p class="text-[#8AC09B]">Meet the dedicated team behind Plotpal.</p>
+        <div class="w-[80%] grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-24 mt-24">
+            <div class="flex flex-col items-center text-center">
+                <img src="/images/heads1.png" alt="" class="h-[200px] w-[200px]" />
+                <h1 class="text-[#fefefe] font-bold sm:text-2xl text-xl my-2">Ogunyinka Tobi</h1>
+                <span class="text-[#fefefe]">CTO</span>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <img src="/images/heads2.png" alt="" class="h-[200px] w-[200px]" />
+                <h1 class="text-[#fefefe] font-bold sm:text-2xl text-xl my-2">Olaniyi Ebenezer</h1>
+                <span class="text-[#fefefe]">CEO</span>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <img src="/images/heads3.png" alt="" class="h-[200px] w-[200px]" />
+                <h1 class="text-[#fefefe] font-bold sm:text-2xl text-xl my-2">Olanrewaju Damola</h1>
+                <span class="text-[#fefefe]">CFO</span>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <img src="/images/heads4.png" alt="" class="h-[200px] w-[200px]" />
+                <h1 class="text-[#fefefe] font-bold sm:text-2xl text-xl my-2">Dauda Abdulsalam</h1>
+                <span class="text-[#fefefe]">Product</span>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <img src="/images/heads5.png" alt="" class="h-[200px] w-[200px]" />
+                <h1 class="text-[#fefefe] font-bold sm:text-2xl text-xl my-2">Elijah Oluwaseun</h1>
+                <span class="text-[#fefefe]">Engineering</span>
+            </div>
+        </div>
+    </div>
+    <div class="relative w-full bg-[#65DC8B] py-24 flex justify-center my-16">
+        <img src="/images/left.png" alt="" class="absolute left-[0] bottom-[0] sm:w-[15rem] w-[10rem]"> 
+        <img src="/images/right.png" alt="" class="absolute right-[0] top-[0] sm:w-[15rem] w-[8rem]"> 
+        <div class="lg:w-[70%] w-[90%] flex lg:flex-row flex-col justify-between items-center">
+            <div class="lg:text-left text-center mb-6">
+                <h1 class="text-[#0C0C0E] font-bold lg:text-[40px] text-2xl leading-[49px]">Join our weekly newsletter</h1>
+                <p class="text-[#2D312E] leading-[20px]">Stay up to date with the latest news, announcements and articles.</p>
+            </div>
+            <div class="flex lg:flex-row flex-col items-center gap-6">
+                <input type="email" placeholder="Enter your email" class="text-[#7F7F7F] py-3 px-14 rounded-[4px] focus:outline-none" />
+                <button class="py-3 px-10 text-[#fefefe] bg-[#000] font-semibold rounded-[4px]">Join now</button>
+            </div>
+        </div>
+    </div>
+</section>

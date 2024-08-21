@@ -1,0 +1,193 @@
+<% layout('layouts/boilerplate') %>
+<section class="w-full flex flex-col items-center bg-[#0C0C0E] lg:min-h-[100vh]">
+    <main class="lg:w-[80%] w-[90%] flex flex-col items-center gap-14 text-center py-32 lg:mb-10">
+        <h1 class="font-semibold text-[#65DC8B] px-10 py-2 border border-[#2D302E] rounded-[8px]">Waitlist</h1>
+        <div class="w-full sm:hidden h-[604px] rounded-[40px] overflow-hidden">
+            <img src="/images/registerSmall.png" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="register relative w-full min-h-[75vh] rounded-3xl flex justify-center overflow-hidden">
+            <div class="underlay"></div>
+            <div class="lg:w-[45%] sm:w-[80%] w-full flex flex-col items-center justify-center text-left z-[10]">
+                <form id="regForm" action="/Join" class="w-full text-[#fefefe] space-y-6 text-left" method="POST" novalidate>
+                    <div class="w-full grid lg:grid-cols-2 grid-cols-1 lg:gap-8 gap-0 lg:space-y-0 space-y-4">
+                        <div class="flex flex-col">
+                            <label for="firstName" class="font-medium text-sm text-[#FDFDFF]">First name</label>
+                            <input
+                                type="text"
+                                name="firstName"
+                                id="firstName"
+                                class="lg:p-4 py-2.5 text-sm px-4 mt-2 rounded-lg text-[#000000] focus:outline-none bg-[#DEDEDE]"
+                                placeholder="Enter first name"
+                                required
+                            />
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="lastName" class="font-medium text-sm text-[#FDFDFF]">Last name</label>
+                            <input
+                                type="text"
+                                name="lastName"
+                                id="lastName"
+                                class="lg:p-4 py-2.5 text-sm px-4 mt-2 rounded-lg text-[#000000] focus:outline-none bg-[#DEDEDE]"
+                                placeholder="Enter last name"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-8 gap-0 lg:space-y-0 space-y-4">
+                        <div class="flex flex-col">
+                            <label for="email" class="font-medium text-sm text-[#FDFDFF]">E-mail</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="lg:p-4 py-2.5 text-sm px-4 mt-2 rounded-lg text-[#000000] focus:outline-none bg-[#DEDEDE]"
+                                placeholder="Enter email"
+                                required
+                            />
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="phoneNumber" class="font-medium text-sm text-[#FDFDFF]">Phone number</label>
+                            <input
+                                type="number"
+                                name="phoneNumber"
+                                id="phoneNumber"
+                                class="lg:p-4 py-2.5 text-sm px-4 mt-2 rounded-lg text-[#000000] focus:outline-none bg-[#DEDEDE]"
+                                placeholder="Enter phone number"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="location" class="font-medium text-sm text-[#FDFDFF]">Location</label>
+                        <input
+                            type="text"
+                            name="location"
+                            id="location"
+                            class="lg:p-4 py-2.5 text-sm px-4 mt-2 rounded-lg text-[#000000] focus:outline-none bg-[#DEDEDE]"
+                            placeholder="Enter location"
+                            required
+                        />
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="deviceType" class="font-medium text-sm text-[#FDFDFF]">Device type</label>
+                        <select name="deviceType" id="deviceType" class="lg:p-4 py-2.5 text-sm px-4 mt-2 rounded-lg text-[#000000] focus:outline-none bg-[#DEDEDE]" required>
+                            <option value="" disabled selected>Select device type</option>
+                            <option value="andriod">Android</option>
+                            <option value="apple">Apple</option>
+                        </select>
+                    </div>
+                    <button
+                        id="submitBtn"
+                        class="w-full py-4 rounded-lg ease-in duration-300 text-[#fefefe] font-semibold hover:text-[#65DC8B] bg-[#65DC8B] hover:bg-[#fefefe] flex items-center justify-center"
+                    >
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</section>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    const regexp_email = new RegExp(/^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$/i);
+    const regexp_phone = new RegExp(/^([0-9]{1,3})([7-9][0-9]{9}|[1-9]{1,2}[0-9]{7})$/i); //"/^[0-9]{1,3}[0-9]{7,10}
+    // function validateInputs(formId) {
+    //     const requiredInputs = $(formId).find("input[required], select[required], textarea[required]");
+    //     let isValid = true;
+
+    //     requiredInputs.each(function () {
+    //         const $input = $(this);
+    //         const isEmpty = !$input.val().trim();
+    //         const isInvalid =
+    //             ($input.is("select") && ($input.find("option:selected").prop("disabled") || $input.find("option:selected").prop("hidden"))) ||
+    //             ($input.attr("type") === "file" && $input.get(0).files.length === 0) ||
+    //             ($input.attr("type") === "email" && !regexp_email.test($input.val())) ||
+    //             ($input.attr("type") === "tel" && !regexp_phone.test($input.val()));
+
+    //         if (isEmpty || isInvalid) {
+    //             $input.addClass("invalid").focus();
+    //             setTimeout(() => $input.removeClass("invalid"), 2000);
+    //             isValid = false;
+    //             return false;
+    //         }
+    //     });
+
+    //     return isValid;
+    // }
+
+    function validateInputs(containerId) {
+        const requiredInputs = $(containerId).find("input[required], select[required], textarea[required]");
+        let isValid = true;
+
+        requiredInputs.each(function () {
+            let $input = $(this);
+
+            if ($input.is("select")) {
+                const selectedOption = $input.find("option:selected");
+                if (selectedOption.prop("disabled") || selectedOption.prop("hidden")) {
+                    $input.addClass("invalid");
+                    setTimeout(function () {
+                        // Use the stored reference to $(this)
+                        $input.removeClass("invalid");
+                    }, 2000);
+                    isValid = false;
+                } else {
+                    $input.removeClass("invalid");
+                }
+            } else {
+                if ($input.attr("type") === "file") {
+                    if ($input.get(0).files.length === 0) {
+                        alert("Please select a file.");
+                        $input.addClass("invalid");
+                        setTimeout(function () {
+                            $input.removeClass("invalid");
+                        }, 2000);
+                        isValid = false;
+                    } else {
+                        $input.removeClass("invalid");
+                    }
+                } else {
+                    if ($input.val().trim() === "") {
+                        $input.addClass("invalid");
+                        setTimeout(function () {
+                            $input.removeClass("invalid");
+                        }, 2000);
+                        isValid = false;
+                    } else {
+                        $input.removeClass("invalid");
+                    }
+
+                    if ($input.attr("type") === "email") {
+                        if (!regexp_email.test($input.val())) {
+                            $input.addClass("invalid");
+                            setTimeout(function () {
+                                $input.removeClass("invalid");
+                            }, 2000);
+                            isValid = false;
+                        }
+                    }
+
+                    if ($input.attr("type") === "tel") {
+                        if (!regexp_phone.test($input.val())) {
+                            $input.addClass("invalid");
+                            setTimeout(function () {
+                                $input.removeClass("invalid");
+                            }, 2000);
+                            isValid = false;
+                        }
+                    }
+                }
+            }
+        });
+
+        return isValid;
+    }
+
+    $("#regForm").on("submit", function (event) {
+        if (!validateInputs("#regForm")) {
+            event.preventDefault();
+            return;
+        }
+    });
+</script>

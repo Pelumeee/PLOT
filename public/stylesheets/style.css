@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+}
+.blurr {
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(0.5rem);
+}
+
+
+.hero {
+    background-image: url("../images/bgImg.png");
+    background-size: cover;
+    background-position: center center;
+}
+.register {
+    background-image: url("../images/joinImg.png");
+    background-size: cover;
+    background-position: center center;
+}
+.download {
+    background-image: url("../images/bgImage.png");
+    background-size: cover;
+    background-position: center center;
+}
+.joinWaitlist {
+    background-image: url("../images/JoinImage.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+.active-tab {
+    color: #65dc8b;
+    font-weight: 700;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+}
+.hiddenn {
+    display: none !important;
+}
+
+.faq.active .answer {
+    max-height: 300px;
+    animation: fade 0.5s linear;
+}
+
+.faq.active .question svg {
+    transform: rotate(45deg);
+}
+
+.underlay {
+    position: absolute;
+    inset: 0;
+    background-color: #000;
+    opacity: 0.6;
+}
+.carousel {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.move {
+    transition: transform 0.4s ease-in-out;
+}
+.move {
+    transform: translateX(-1.5rem);
+}
+.carousel.active {
+    opacity: 1;
+}
+.accContainer {
+    transition: background-color 0.5s ease-in-out;
+}
+
+.accText {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.cardText {
+    transform: translateY(100px);
+    transition: transform 0.5s ease-in-out;
+}
+.accContainer:hover,
+.accContainer.active {
+    background-color: #e0e0e04d;
+}
+
+.accContainer:hover .move,
+.accContainer.active .move {
+    transform: translateX(0);
+}
+
+.accContainer:hover .accText {
+    max-height: 300px;
+    animation: fade 0.5s linear;
+}
+
+#submenu {
+    animation: navfade 0.3s linear;
+}
+.cardCont:hover .cardText {
+    transform: translateY(0px);
+}
+
+.accContainer.active .accText {
+    max-height: 300px;
+    animation: fade 0.5s linear;
+}
+.firstImg {
+    transition: opacity 0.5s ease-in-out;
+}
+.thirdImg {
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+/*  ====================== ROTATING ILLUSTRATIONS ==================== */
+
+.cardCont {
+    transform: translateX(13rem);
+}
+.rotate,
+.secImg {
+    transition: transform 0.5s ease-in-out;
+}
+.cardCont:hover .firstImg {
+    opacity: 0;
+}
+
+.cardCont:hover .secImg {
+    transform: translateY(10rem);
+}
+.cardCont:hover .secondImg {
+    transform: rotate(-90deg) translateX(7rem) translateY(-22rem);
+}
+.cardCont:hover .thirdImgg {
+    transform: rotate(-90deg) translateX(7rem) translateY(-33rem);
+}
+.cardCont:hover .thirdImg {
+    transform: translateY(0);
+}
+
+.stickyContainer {
+    position: sticky;
+    top: 0rem;
+}
+
+.invalid {
+    border: 1px solid red !important;
+} 
+
+
+
+#menu{
+    padding-inline: 0 !important;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes navfade {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========HIDE SCROLLBARS  =========*/
+.no-scrollbar {
+    overflow: -moz-scrollbars-none; /* For older Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For modern Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* For WebKit browsers (Chrome, Safari, etc.) */
+}
+
+/* ========================================== */
+/* =============== SCROLL==================== */
+/* ========================================== */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    border: none;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #65dc8b;
+    height: 1rem;
+}
+
+@media (max-width: 600px) {
+    .register {
+        background-image: none;
+    }
+    .underlay {
+        opacity: 0;
+    }
+}
+@media (max-width: 1400px) {
+    .stickyContainer {
+        position: static;
+    }
+    .cardCont {
+        transform: translateX(8rem);
+    }
+}
+@media (max-width: 990px) {
+    .cardCont {
+        transform: translateX(0rem);
+    }
+}

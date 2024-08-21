@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PlotPal</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: "#da373d",
+                        },
+                        screens: {
+                            fd: [{ max: "320px" }],
+                            sm: "576px",
+                            md: "768px",
+                            lg: "992px",
+                            xl: "1200px",
+                            "2xl": "1400px",
+                            "3xl": "1800px",
+                        },
+                        fontWeight: {
+                            thin: "100",
+                            hairline: "100",
+                            extralight: "200",
+                            light: "300",
+                            normal: "400",
+                            medium: "500",
+                            semibold: "600",
+                            bold: "700",
+                            extrabold: "800",
+                            "extra-bold": "800",
+                            black: "900",
+                        },
+                    },
+                },
+            };
+        </script>
+        <link rel="stylesheet" href="/stylesheets/hamburger.css" />
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <%- include('../partials/nav') %> <%- body %> <%- include('../partials/footer') %>
+
+        <script>
+            const menu = document.querySelector("#menu");
+            const subMenu = document.querySelector("#submenu");
+            menu.addEventListener("click", () => {
+                menu.classList.toggle("is-active");
+                subMenu.classList.toggle("hiddenn");
+            });
+
+
+            document.addEventListener("click", (event) => {
+                const isClickInsideSubMenu = subMenu.contains(event.target);
+                const isClickInsideMenu = menu.contains(event.target);
+                if (!isClickInsideSubMenu &&!isClickInsideMenu) {
+                    menu.classList.remove("is-active");
+                    subMenu.classList.add("hiddenn");
+                }
+
+            });
+
+        </script>
+    </body>
+</html>
